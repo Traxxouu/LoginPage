@@ -1,0 +1,71 @@
+/* SSLWENOW/styles.css */
+body {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login {
+    width: 340px;
+    height: 400px;
+    background: #2c2c2c;
+    padding: 47px;
+    color: #fff;
+    border-radius: 17px;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    width: 100%;
+    padding: 13px;
+    margin: 20px 0;
+    background: #3c3c3c;
+    border-radius: 100px;
+  }
+  
+  .login input[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border-radius: 500px;
+  }
+  
+  .login input[type="submit"]:hover {
+    background: linear-gradient(144deg, #1e1e1e 50%, #1e1e1e);
+  }
+  
+
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    
+    /* Positionnement en haut */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Assure que le bouton soit au-dessus des autres éléments */
+    
+    background: rgb(255,0,0); /* Rouge */
+    box-shadow: 0 0 25px rgb(255,0,0);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(255,0,0),
+                0 0 25px rgb(255,0,0),
+                0 0 50px rgb(255,0,0),
+                0 0 100px rgb(255,0,0); /* Ombre rouge plus intense */
+  }
+  
+  

@@ -1,0 +1,138 @@
+/* Header */
+body{
+    background-color: black;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.header p {
+    color: white;
+}
+
+.hour{
+    color: blue;
+}
+.username {
+    color: blue;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Barre de navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c2c2c; /* Fond sombre */
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar ul li a:hover {
+    color: #5b42f3; /* Couleur d'hover */
+    background-color: #444444; /* Léger fond d'hover */
+    border-radius: 5px; /* Pour adoucir les bords lors du hover */
+}
+
+.navbar .reddec{
+    color: red;
+}
+
+/* Assure que le contenu ne commence pas derrière la barre de navigation */
+body {
+    padding-top: 60px;
+}
+
+
+/* Style pour la page Mon Compte */
+.account-info {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.account-info h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.account-info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.account-info .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5b42f3;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.account-info .btn:hover {
+    background-color: #af40ff;
+}
+
+#map {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Pour s'assurer qu'elle est bien visible */
+    margin-top: -5%;
+}

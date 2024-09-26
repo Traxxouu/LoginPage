@@ -1,0 +1,210 @@
+/* Positionnement des boutons Retour et Ajouter une carte */
+.retour {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgb(255, 0, 0); /* Rouge */
+  box-shadow: 0 0 25px rgb(255, 0, 0);
+}
+
+.retour:hover {
+  box-shadow: 0 0 5px rgb(255, 0, 0),
+              0 0 25px rgb(255, 0, 0),
+              0 0 50px rgb(255, 0, 0),
+              0 0 100px rgb(255, 0, 0);
+}
+
+.ajouter-carte {
+  position: fixed;
+  top: 20px;
+  left: 79%;
+  z-index: 1000;
+  background: rgb(0, 140, 255); /* Bleu */
+  box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.ajouter-carte:hover {
+  box-shadow: 0 0 5px rgb(0, 140, 255),
+              0 0 25px rgb(0, 140, 255),
+              0 0 50px rgb(0, 140, 255),
+              0 0 100px rgb(0, 140, 255);
+}
+
+/* Cartes bancaires */
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.flip-card {
+background-color: transparent;
+width: 240px;
+height: 180px;
+perspective: 1000px;
+color: white;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+border-radius: 1rem;
+}
+
+.flip-card-front {
+background: linear-gradient(135deg, #edcb78, #f7e4b2, #fee08b);
+border: 1px solid white;
+padding: 10px;
+}
+
+.flip-card-back {
+background: linear-gradient(135deg, #fee08b, #f7e4b2, #edcb78);
+transform: rotateY(180deg);
+padding: 10px;
+}
+
+.name {
+font-size: 12px;
+color: #bea35c;
+}
+
+.number, .date_8264, .cvc_number, .status {
+font-size: 14px;
+margin: 5px 0;
+}
+
+.status.available {
+  color: green;
+}
+
+.status.unavailable {
+  color: red;
+}
+
+/* Style du bouton ON/OFF */
+.switch {
+position: relative;
+display: inline-block;
+width: 34px;
+height: 20px;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 34px;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 12px;
+width: 12px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+
+input:checked + .slider {
+background-color: #5b42f3;
+}
+
+input:checked + .slider:before {
+transform: translateX(14px);
+}
+
+/* Positionnement et stylisation du formulaire */
+#add-card-form {
+  margin-top: 30px;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 600px;
+  display: inline-block;
+}
+
+#add-card-form input, #add-card-form select {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c3c3c;
+  color: #fff;
+  font-size: 14px;
+}
+
+#add-card-form button {
+  padding: 10px 20px;
+  background-color: #00ddeb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#add-card-form button:hover {
+  background-color: #5b42f3;
+  transition: background-color 0.3s ease;
+}
+
+/* Eviter que la carte empiète sur le formulaire */
+.cards-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Ajout d'une marge pour espacer les éléments */
+.flip-card {
+  margin: 20px;
+}
+
+/* Ajustement des dimensions de la carte */
+.flip-card {
+  background-color: transparent;
+  width: 240px;
+  height: 154px;
+  perspective: 1000px;
+  color: white;
+}
